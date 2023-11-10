@@ -1,0 +1,8 @@
+<p>
+  Welcome
+</p>
+
+<app-dropdown [items]="['Toto', 'Titi', 'Tata']" [(selected)]="name"></app-dropdown>
+
+<!-- [(selected)] en version longue donnerait : -->
+<!-- <app-dropdown [items]="['Toto', 'Titi', 'Tata']" [selected]="name" (selectedChange)="name = $event"></app-dropdown> -->

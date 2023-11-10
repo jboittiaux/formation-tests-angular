@@ -1,0 +1,6 @@
+<div class="menu">
+  <div *ngFor="let item of items"
+    [style.textDecoration]="selected === item ? 'underline': 'none'"
+    (click)="selectedChange.emit(item)"
+  >{{ item }}</div>
+</div>
