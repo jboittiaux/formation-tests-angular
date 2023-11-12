@@ -98,7 +98,6 @@ describe('TodosComponent', () => {
   // Comment faire un double
   // Alternative 1 : recevoir le service dans son code
   it('should show data from server', async () => {
-
     const httpClient = TestBed.inject(HttpClient);
     spyOn(httpClient, 'get').and.returnValue(of([{title: 'ABC'}, { title: 'DEF' }]))
 
@@ -121,7 +120,4 @@ describe('TodosComponent', () => {
     expect(nativeElement.textContent).toContain('WXY');
     expect(nativeElement.textContent).toContain('GHI');
   });
-
-  
-
 });

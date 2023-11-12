@@ -21,6 +21,7 @@ describe('UsersListComponent', () => {
   });
 
   beforeEach(() => {
+    // surcharge de la fonction getList$ pour tous les tests
     const userService = TestBed.inject(UserService);
     spyOn(userService, 'getList$').and.returnValue(of([{id: 1, name: "Toto"}, { id: 2, name: 'Titi' }]))
 
@@ -35,7 +36,6 @@ describe('UsersListComponent', () => {
   });
 
   it('should display data from userService (spyOn)', () => {
-
     expect(nativeElement.textContent).toContain('Toto');
     expect(nativeElement.textContent).toContain('Titi');
   });
